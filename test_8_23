@@ -1,0 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int num = 20;
+	if (1 <= num && 100 >= num)
+		if ( num %2 == 0)
+			printf("这个数不是奇数\n");
+		else
+			printf("这个数是奇数\n");
+	return 0;
+}
