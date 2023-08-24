@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int day = 0;
+	int const n = 1;
+	scanf("%d",&day);
+	switch (day)
+	{
+	case n:
+			printf("星期一\n");
+			break;
+	case 2:
+			printf("星期二\n");
+	case 3:
+		    printf("星期三\n");
+	case 4:
+			printf("星期四\n");
+	case 5:
+			printf("星期五\n");
+	case 6:
+			printf("星期六\n");
+	case 7:
+			printf("星期天\n");
+}
