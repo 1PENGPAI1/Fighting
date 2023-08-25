@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+#include<windows.h>
+#include<stdlib.h>
+int main()
+{
+	char arr1[] = "welcome to bit!!!!!!!";
+	char arr2[] = "   #    #     #    # ";
+	int left = 0;
+	int right = strlen(arr1)-1;
+	//int A = 0;
+	//int B = 0;
+	while (left <= right)
+	{
+		arr2[right] = arr1[right];
+		arr2[left] = arr1[left];
+		printf("%s\n", arr2);
+		Sleep(1000);
+		system("cls");
+		left++;
+		right--;
+	}
+	printf("欢迎您的光临！！");
+		printf("网络可真是个好地方");
+	}
+	else if (getchar() == 'B')
+	{
+		printf("感谢朋友的推荐！");
+	}
+
+	return 0;
+}
