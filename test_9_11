@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int Max(int a,int b)
+{
+	return (a > b ? a : b);
+}
+int Num(int n)
+{
+	return (n > 0 ? n : -n);
+}
+int main()
+{
+	int x1, y1, x2, y2;
+	scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+	int ret1 = Num(x1 - x2);
+	int ret2 = Num(y1 - y2);
+	printf("%d", Max(ret1, ret2));
+	return 0;
+}
