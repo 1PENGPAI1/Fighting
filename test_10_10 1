@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<windows.h>
+int a[205][205];
+int MAX(int x, int y){
+	return x > y ? x : y;
+}
+int MIN(int x, int y) {
+	return x < y ? x : y;
+}
+int main()
+{
+	//先输出所有的值
+	int n = 0; int m = 0;
+	scanf("%d%d", &n, &m);
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= m; j++) {
+			scanf("%d", &a[i][j]);
+		}
+	}
+	//再进行一一对比大小
+	int ans = 0;
+	for (int i = 1; i <= n; i++) {
+		int res = 1e10;
+		for (int j = 1; j <= m; j++) {
+			res = MIN(res, a[i][j]);
+		}
+		ans = MAX(ans, res);
+	}
+	printf("%d", ans);
+	system("pause");
+	return 0;
+}
