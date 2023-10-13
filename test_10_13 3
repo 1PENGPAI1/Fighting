@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+int Flower(int x) {
+	int a = x / 100;
+	int b = (x / 10) % 10;
+	int c = x % 10;
+	int result = pow(a, 3) + pow(b, 3) + pow(c, 3);
+	if (result == x)
+		return 1;
+	return 0;
+}
+int main(void) {
+	for (int i = 100; i < 1000; i++) {
+		if (Flower(i) == 1)
+			printf("%d  \n", i);
+	}
+	return 0;
+}
