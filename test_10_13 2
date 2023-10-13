@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int prime(int n) {
+	for (int i = 2; i <= n - 1; i++) {
+		if (n % i == 0) {
+			return 0;
+		}
+		return 1;
+	}
+}
+int main(void) {
+	int j, q, num = 0;
+	int prime(int x);
+	//注意这里不能填2000因为1999+2=2001，超出了2000！
+	for (j = 2; j <= 1998;j++) {
+		if (prime(j) == 1) {
+			q = j + 2;
+			if (prime(q) == 1) {
+				num++;
+			}
+		}
+	}
+	printf("%d", num);
+	return 0;
+}
