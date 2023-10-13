@@ -1,0 +1,30 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int ADD(int x, int y) {
+	int result;
+	printf("请输入两个整数的结果:>");
+	scanf("%d", &result);
+	if (x + y == result) {
+		return 1;
+	}
+	return 0;
+}
+void Print(int flag, int chance) {
+	if (flag)
+		printf("Right!\n");
+	else if (flag == 0 && chance < 3)
+		printf("Not correct!\nPlease try again!\n");
+	else
+		printf("Not correct!You have tried three times\nTest over\n");
+}
+int main(void) {
+	int a, b, answer, chance = 0;
+	printf("Inout a,b:>");
+	scanf("%d%d", &a, &b);
+	do {
+		answer = ADD(a, b);
+		chance++;
+		Print(answer, chance);
+	} while ((answer == 0) && (chance < 3));
+	return 0;
+}
