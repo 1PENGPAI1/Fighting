@@ -1,0 +1,11 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+int main(void) {
+	int n;
+	double i = 3.0;
+	scanf("%d", &n);
+	double ret = 3 * pow(n, 1/i);
+	printf("%.3lf\n", ret);
+	return 0;
+}
